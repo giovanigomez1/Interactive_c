@@ -1,0 +1,24 @@
+@import 'base';
+@import 'mixins';
+
+.container {
+  max-width: 115rem;
+  width: 85vw;
+  @media only screen and (max-width: $bp-large){
+    width: 95vw;
+  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+  @import 'card';
+  @import 'form';  
+  @import 'success';
+}
+
+.hidden {
+  display: none !important;
+}

@@ -1,0 +1,88 @@
+.card {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  // background-color: orangered;
+  &__front {
+    box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.104);
+    border-radius: 15px;
+    &--bg__img {
+      position: relative;
+      background-image: url('../images/bg-card-front.png');
+      background-repeat: no-repeat;
+      .bg__front-img {
+        visibility: hidden;
+        opacity: 0;
+        display: block;
+      }
+      &-details {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        .card__info {
+          display: flex;
+          flex-direction: column;
+          gap: 2.8rem;
+          width: 100%;
+          &--num {
+            color: var(--white);
+            text-align: center;
+            & p {
+              letter-spacing: 6px;
+              font-size: 2.4rem;
+              text-align: initial;
+            }
+          }
+          &--name-exp {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.4rem;
+            color: var(--white);
+            text-transform: uppercase;
+            letter-spacing: 1.8;
+          }
+        }
+      }
+    }
+  }
+  &__back {
+    align-self: flex-end;
+    border-radius: 15px;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.184);
+    &--bg__img {
+      position: relative;
+      background-image: url('../images/bg-card-back.png');
+      background-repeat: no-repeat;
+      .bg__back-img {
+        visibility: hidden;
+        opacity: 0;
+        display: block;
+      }
+      &-details {
+        position: absolute;
+        top: 0;
+        // background-color: yellow;
+        width: 100%;
+        height: 100%;
+        padding: 0 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        &--ccv {
+          font-size: 1.4rem;
+          color: var(--white);
+
+        }
+      }
+    }
+  }
+}
