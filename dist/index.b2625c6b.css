@@ -21,15 +21,28 @@ body {
   background-image: url("bg-main-desktop.5139ad05.png");
   background-repeat: no-repeat;
   background-size: contain;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
   width: 100%;
   height: 100vh;
   font-family: Space Grotesk, sans-serif;
+  display: flex;
   position: relative;
 }
 
 @media only screen and (width <= 50em) {
   body {
     background-image: url("bg-main-mobile.3cde4cdf.png");
+    padding-top: 15rem;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  body {
+    align-items: flex-start;
+    padding-top: 5rem;
   }
 }
 
@@ -38,15 +51,17 @@ body {
   width: 85vw;
   max-width: 115rem;
   display: grid;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 @media only screen and (width <= 62.5em) {
   .container {
     width: 95vw;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container {
+    justify-items: center;
   }
 }
 
@@ -65,15 +80,49 @@ body {
   display: flex;
 }
 
+@media only screen and (width <= 50em) {
+  .container .card {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    display: grid;
+  }
+}
+
 .container .card__front {
   border-radius: 15px;
   box-shadow: 2rem 2rem 3rem #0000001b;
 }
 
+@media only screen and (width <= 50em) {
+  .container .card__front {
+    z-index: 10;
+    width: 44.7rem;
+    position: absolute;
+    top: 17%;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .card__front {
+    width: 79%;
+  }
+}
+
 .container .card__front--bg__img {
   background-image: url("bg-card-front.0a4a5e13.png");
   background-repeat: no-repeat;
+  border-radius: 10px;
   position: relative;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .card__front--bg__img {
+    background-size: cover;
+    width: 100%;
+  }
 }
 
 .container .card__front--bg__img .bg__front-img {
@@ -82,10 +131,17 @@ body {
   display: block;
 }
 
+@media only screen and (width <= 37.5em) {
+  .container .card__front--bg__img .bg__front-img {
+    width: 100%;
+  }
+}
+
 .container .card__front--bg__img-details {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 0;
   width: 100%;
   height: 100%;
   padding: 3rem;
@@ -94,11 +150,23 @@ body {
   top: 0;
 }
 
+@media only screen and (width <= 37.5em) {
+  .container .card__front--bg__img-details {
+    padding: 1.6rem;
+  }
+}
+
 .container .card__front--bg__img-details .card__info {
   flex-direction: column;
   gap: 2.8rem;
   width: 100%;
   display: flex;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .card__front--bg__img-details .card__info {
+    gap: .8rem;
+  }
 }
 
 .container .card__front--bg__img-details .card__info--num {
@@ -112,12 +180,22 @@ body {
   font-size: 2.4rem;
 }
 
+@media only screen and (width <= 37.5em) {
+  .container .card__front--bg__img-details .card__info--num p {
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+
 .container .card__front--bg__img-details .card__info--name-exp {
   color: var(--white);
   text-transform: uppercase;
   letter-spacing: 1.8px;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 0;
   font-size: 1.4rem;
   display: flex;
 }
@@ -128,10 +206,32 @@ body {
   box-shadow: 0 2rem 3rem #0000002f;
 }
 
+@media only screen and (width <= 50em) {
+  .container .card__back {
+    grid-row: 1;
+    place-self: auto flex-end;
+    width: 44.7rem;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .card__back {
+    width: 79%;
+  }
+}
+
 .container .card__back--bg__img {
   background-image: url("bg-card-back.53689e1a.png");
   background-repeat: no-repeat;
+  border-radius: 10px;
   position: relative;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .card__back--bg__img {
+    background-size: cover;
+    width: 100%;
+  }
 }
 
 .container .card__back--bg__img .bg__back-img {
@@ -140,9 +240,17 @@ body {
   display: block;
 }
 
+@media only screen and (width <= 37.5em) {
+  .container .card__back--bg__img .bg__back-img {
+    width: 100%;
+  }
+}
+
 .container .card__back--bg__img-details {
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  gap: 0;
   width: 100%;
   height: 100%;
   padding: 0 6rem;
@@ -165,14 +273,37 @@ body {
   display: flex;
 }
 
+@media only screen and (width <= 50em) {
+  .container .card__form {
+    align-items: baseline;
+    padding: 0;
+  }
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .card__form {
+    width: 90vw;
+  }
+}
+
 .container .card__form--container {
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
   gap: 1.8rem;
   display: flex;
 }
 
+@media only screen and (width <= 37.5em) {
+  .container .card__form--container {
+    width: 100%;
+  }
+}
+
 .container .card__form--container .form__group {
   flex-direction: column;
+  justify-content: normal;
+  align-items: normal;
   gap: .5rem;
   display: flex;
 }
@@ -216,8 +347,18 @@ body {
   display: flex;
 }
 
+@media only screen and (width <= 37.5em) {
+  .container .card__form--container .form__group--exp-mmyy {
+    gap: .5rem;
+  }
+}
+
 .container .card__form--container .form__group--exp-mmyy input {
   width: 7rem;
+}
+
+.container .card__form--container .form__group--cvv input {
+  width: 98%;
 }
 
 .container .card__form--container .form__card_details {
@@ -226,6 +367,12 @@ body {
   align-items: center;
   gap: 4rem;
   display: flex;
+}
+
+@media only screen and (width <= 37.5em) {
+  .container .card__form--container .form__card_details {
+    gap: 1rem;
+  }
 }
 
 .container .card__form--container .form__card_details .form__group--exp, .container .card__form--container .form__card_details .form__group--cvv {

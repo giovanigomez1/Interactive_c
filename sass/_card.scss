@@ -1,21 +1,46 @@
 .card {
-  justify-content: flex-start;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3rem;
-  // background-color: orangered;
+  @include flex(column, flex-start, flex-start, 3rem);
+  // justify-content: flex-start;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
+  // gap: 3rem;
+  @media only screen and (max-width: $bp-medium){
+    justify-content: center;
+    align-items: center;
+    gap: 0; 
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
   &__front {
     box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.104);
     border-radius: 15px;
+    @media only screen and (max-width: $bp-medium){
+      width: 44.7rem;
+      position: absolute;
+      z-index: 10;
+      top: 17%;  
+    }
+    @media only screen and (max-width: $bp-small){
+      width: 79%;
+    }
     &--bg__img {
       position: relative;
       background-image: url('../images/bg-card-front.png');
       background-repeat: no-repeat;
+      border-radius: 10px;
+      @media only screen and (max-width: $bp-small){
+        width: 100%;
+        background-size: cover;
+      }
       .bg__front-img {
         visibility: hidden;
         opacity: 0;
         display: block;
+        @media only screen and (max-width: $bp-small){
+          width: 100%;
+        }
       }
       &-details {
         position: absolute;
@@ -23,15 +48,23 @@
         width: 100%;
         height: 100%;
         padding: 3rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-between;
+        @include flex(column, space-between, flex-start, 0);
+        // display: flex;
+        // flex-direction: column;
+        // align-items: flex-start;
+        // justify-content: space-between;
+        @media only screen and (max-width: $bp-small){
+          padding: 1.6rem;
+        }
+
         .card__info {
           display: flex;
           flex-direction: column;
           gap: 2.8rem;
           width: 100%;
+          @media only screen and (max-width: $bp-small){
+            gap: .8rem;
+          }
           &--num {
             color: var(--white);
             text-align: center;
@@ -39,12 +72,18 @@
               letter-spacing: 6px;
               font-size: 2.4rem;
               text-align: initial;
+              @media only screen and (max-width: $bp-small){
+                letter-spacing: 3px;
+                text-align: center;
+                font-size: 1.8rem;
+              }
             }
           }
           &--name-exp {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            @include flex(row, space-between, center, 0);
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
             font-size: 1.4rem;
             color: var(--white);
             text-transform: uppercase;
@@ -58,14 +97,31 @@
     align-self: flex-end;
     border-radius: 15px;
     box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.184);
+    @media only screen and (max-width: $bp-medium){
+      align-self: auto;
+      width: 44.7rem;
+      grid-row: 1;
+      justify-self: flex-end;
+    }
+    @media only screen and (max-width: $bp-small){
+      width: 79%;
+    }
     &--bg__img {
       position: relative;
       background-image: url('../images/bg-card-back.png');
       background-repeat: no-repeat;
+      border-radius: 10px;
+      @media only screen and (max-width: $bp-small){
+        width: 100%;
+        background-size: cover;
+      }
       .bg__back-img {
         visibility: hidden;
         opacity: 0;
         display: block;
+        @media only screen and (max-width: $bp-small){
+          width: 100%;
+        }
       }
       &-details {
         position: absolute;
@@ -74,13 +130,13 @@
         width: 100%;
         height: 100%;
         padding: 0 6rem;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        @include flex(row, flex-end, center, 0);
+        // display: flex;
+        // align-items: center;
+        // justify-content: flex-end;
         &--ccv {
           font-size: 1.4rem;
           color: var(--white);
-
         }
       }
     }

@@ -5,14 +5,26 @@
   // justify-content: center;
   // align-items: center;
   @include flex(row, center, center, 0);
+  @media only screen and (max-width: $bp-medium){
+    padding: 0;
+    align-items: baseline;
+  }
+  @media only screen and (max-width: $bp-small){
+    width: 90vw;
+  }
 
   &--container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
+    @include flex(column, normal, normal, 1.8rem);
+    // display: flex;
+    // flex-direction: column;
+    // gap: 1.8rem;
+    @media only screen and (max-width: $bp-small){
+      width: 100%;
+    }
     .form__group {
-      display: flex;
-      flex-direction: column;
+      @include flex(column, normal, normal, 0);
+      // display: flex;
+      // flex-direction: column;
       gap: .5rem;
       & label {
         text-transform: uppercase;
@@ -45,9 +57,17 @@
         &-mmyy {
           display: flex;
           gap: 1rem;
+          @media only screen and (max-width: $bp-small){
+            gap: .5rem;
+          }
           & input {
             width: 7rem;  
           }
+        }
+      }
+      &--cvv {
+        & input {
+          width: 98%
         }
       }
     }
@@ -57,6 +77,9 @@
       // justify-content: center;
       // align-items: center;
       // gap: 4rem;
+      @media only screen and (max-width: $bp-small){
+        gap: 1rem;
+      }
       .form__group--exp, 
       .form__group--cvv {
         @include flex(column, flex-start, flex-start, .5rem);
