@@ -3,6 +3,7 @@
 .container {
   max-width: 115rem;
   width: 85vw;
+  position: relative;
   @media only screen and (max-width: $bp-large){
     width: 95vw;
   }

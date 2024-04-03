@@ -34,10 +34,6 @@ body {
   height: 100vh;
   position: relative;
   @include flex(row, center, center, 0);
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // padding-top: 15rem;
   @media only screen and (max-width: $bp-medium){
     background-image: url('../images/bg-main-mobile.png'); 
     padding-top: 15rem;
@@ -46,5 +42,4 @@ body {
     align-items: flex-start;
     padding-top: 5rem;
   }
-
 }

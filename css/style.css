@@ -39,6 +39,7 @@ body {
 .container {
   max-width: 115rem;
   width: 85vw;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr; }
   @media only screen and (max-width: 62.5em) {
@@ -70,19 +71,20 @@ body {
       border-radius: 15px; }
       @media only screen and (max-width: 50em) {
         .container .card__front {
-          width: 44.7rem;
+          max-width: 28.1rem;
           position: absolute;
           z-index: 10;
-          top: 17%; } }
+          top: 14%; } }
       @media only screen and (max-width: 37.5em) {
         .container .card__front {
-          width: 79%; } }
+          width: 79%;
+          max-width: none; } }
       .container .card__front--bg__img {
         position: relative;
         background-image: url("../images/bg-card-front.png");
         background-repeat: no-repeat;
         border-radius: 10px; }
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 50em) {
           .container .card__front--bg__img {
             width: 100%;
             background-size: cover; } }
@@ -90,7 +92,7 @@ body {
           visibility: hidden;
           opacity: 0;
           display: block; }
-          @media only screen and (max-width: 37.5em) {
+          @media only screen and (max-width: 50em) {
             .container .card__front--bg__img .bg__front-img {
               width: 100%; } }
         .container .card__front--bg__img-details {
@@ -104,17 +106,17 @@ body {
           justify-content: space-between;
           align-items: flex-start;
           gap: 0; }
-          @media only screen and (max-width: 37.5em) {
+          @media only screen and (max-width: 50em) {
             .container .card__front--bg__img-details {
-              padding: 1.6rem; } }
+              padding: 1.2rem; } }
           .container .card__front--bg__img-details .card__info {
             display: flex;
             flex-direction: column;
             gap: 2.8rem;
             width: 100%; }
-            @media only screen and (max-width: 37.5em) {
+            @media only screen and (max-width: 50em) {
               .container .card__front--bg__img-details .card__info {
-                gap: .8rem; } }
+                gap: 1.8rem; } }
             .container .card__front--bg__img-details .card__info--num {
               color: var(--white);
               text-align: center; }
@@ -122,7 +124,7 @@ body {
                 letter-spacing: 6px;
                 font-size: 2.4rem;
                 text-align: initial; }
-                @media only screen and (max-width: 37.5em) {
+                @media only screen and (max-width: 50em) {
                   .container .card__front--bg__img-details .card__info--num p {
                     letter-spacing: 3px;
                     text-align: center;
@@ -144,7 +146,7 @@ body {
       @media only screen and (max-width: 50em) {
         .container .card__back {
           align-self: auto;
-          width: 44.7rem;
+          width: 28.1rem;
           grid-row: 1;
           justify-self: flex-end; } }
       @media only screen and (max-width: 37.5em) {
@@ -155,7 +157,7 @@ body {
         background-image: url("../images/bg-card-back.png");
         background-repeat: no-repeat;
         border-radius: 10px; }
-        @media only screen and (max-width: 37.5em) {
+        @media only screen and (max-width: 50em) {
           .container .card__back--bg__img {
             width: 100%;
             background-size: cover; } }
@@ -163,7 +165,7 @@ body {
           visibility: hidden;
           opacity: 0;
           display: block; }
-          @media only screen and (max-width: 37.5em) {
+          @media only screen and (max-width: 50em) {
             .container .card__back--bg__img .bg__back-img {
               width: 100%; } }
         .container .card__back--bg__img-details {

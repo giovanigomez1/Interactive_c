@@ -51,6 +51,7 @@ body {
   width: 85vw;
   max-width: 115rem;
   display: grid;
+  position: relative;
 }
 
 @media only screen and (width <= 62.5em) {
@@ -99,15 +100,16 @@ body {
 @media only screen and (width <= 50em) {
   .container .card__front {
     z-index: 10;
-    width: 44.7rem;
+    max-width: 28.1rem;
     position: absolute;
-    top: 17%;
+    top: 14%;
   }
 }
 
 @media only screen and (width <= 37.5em) {
   .container .card__front {
     width: 79%;
+    max-width: none;
   }
 }
 
@@ -118,7 +120,7 @@ body {
   position: relative;
 }
 
-@media only screen and (width <= 37.5em) {
+@media only screen and (width <= 50em) {
   .container .card__front--bg__img {
     background-size: cover;
     width: 100%;
@@ -131,7 +133,7 @@ body {
   display: block;
 }
 
-@media only screen and (width <= 37.5em) {
+@media only screen and (width <= 50em) {
   .container .card__front--bg__img .bg__front-img {
     width: 100%;
   }
@@ -150,9 +152,9 @@ body {
   top: 0;
 }
 
-@media only screen and (width <= 37.5em) {
+@media only screen and (width <= 50em) {
   .container .card__front--bg__img-details {
-    padding: 1.6rem;
+    padding: 1.2rem;
   }
 }
 
@@ -163,9 +165,9 @@ body {
   display: flex;
 }
 
-@media only screen and (width <= 37.5em) {
+@media only screen and (width <= 50em) {
   .container .card__front--bg__img-details .card__info {
-    gap: .8rem;
+    gap: 1.8rem;
   }
 }
 
@@ -180,7 +182,7 @@ body {
   font-size: 2.4rem;
 }
 
-@media only screen and (width <= 37.5em) {
+@media only screen and (width <= 50em) {
   .container .card__front--bg__img-details .card__info--num p {
     letter-spacing: 3px;
     text-align: center;
@@ -210,7 +212,7 @@ body {
   .container .card__back {
     grid-row: 1;
     place-self: auto flex-end;
-    width: 44.7rem;
+    width: 28.1rem;
   }
 }
 
@@ -227,7 +229,7 @@ body {
   position: relative;
 }
 
-@media only screen and (width <= 37.5em) {
+@media only screen and (width <= 50em) {
   .container .card__back--bg__img {
     background-size: cover;
     width: 100%;
@@ -240,7 +242,7 @@ body {
   display: block;
 }
 
-@media only screen and (width <= 37.5em) {
+@media only screen and (width <= 50em) {
   .container .card__back--bg__img .bg__back-img {
     width: 100%;
   }
