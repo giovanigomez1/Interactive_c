@@ -7,15 +7,16 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;
+    width: 36rem;
+    max-width: 36rem;
   }
   &__front {
     box-shadow: 2rem 2rem 3rem rgba(0, 0, 0, 0.104);
     border-radius: 15px;
     @media only screen and (max-width: $bp-medium){
       max-width: 28.1rem;
-      position: absolute;
       z-index: 10;
-      top: 14%;  
+      margin-top: -13.5rem;
     }
     @media only screen and (max-width: $bp-small){
       width: 79%;
