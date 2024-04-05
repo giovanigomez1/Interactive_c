@@ -443,4 +443,25 @@ body {
 .hidden {
   display: none !important;
 }
+
+.attribution {
+  background-color: var(--light-grayish-violet);
+  color: var(--very-dark-violet);
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  height: 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution p a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
 /*# sourceMappingURL=index.b2625c6b.css.map */
